@@ -1,0 +1,17 @@
+.toolbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 calc(50% - 360px);
+    background-color: lightgrey;
+    font-size: 30px;
+    align-items: center;
+    padding: 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+.link:hover{
+    color: rgb(110, 110, 110);
+}

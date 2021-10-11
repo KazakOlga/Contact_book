@@ -1,0 +1,24 @@
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.form_side{
+    display: flex;
+    flex-direction: column;
+}
+.bordered{
+    margin: 8px;
+}
+.inputs{
+    margin: 10px;
+}
+.cont{
+    align-items: center;
+    justify-content: center;
+}
+.button_add{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}

@@ -1,0 +1,23 @@
+.list_item{
+    display: flex;
+    padding: 15px;
+    background-color: rgb(240, 239, 239);
+    color: rgb(82, 82, 82);
+    border: 1px solid rgb(185, 184, 184);
+    box-shadow: 0 0 10px rgba(77, 76, 76, 0.1);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact_name{
+    margin-right: 10px;
+    padding-top: 8px;
+}
+a{
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+}
+.icon_pos{
+    display: flex;
+    align-items: center;
+}

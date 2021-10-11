@@ -1,0 +1,16 @@
+.input_box{
+    padding: 0 calc(50% - 360px);
+    display: flex;
+    justify-content:space-around
+}
+.surname{
+    margin-top: 35px;
+    padding-left: 33px;
+}
+.margin{
+    margin-top: 25px;
+}
+.save{
+    margin-left: 33px;
+    margin-top: 45px;
+}
