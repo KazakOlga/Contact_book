@@ -1,7 +1,7 @@
 import React from 'react';
 import './CreateNew.css'
 import { useHistory} from 'react-router';
-import { createNewContact } from './State/actions/CreateNew';
+import { createNewContact} from './State/actions/CreateNew';
 import { useDispatch} from 'react-redux';
 import Input from './Input';
 

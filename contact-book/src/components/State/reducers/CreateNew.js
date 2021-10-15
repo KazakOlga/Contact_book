@@ -1,16 +1,17 @@
 import { CREATE_NEW_CONTACT } from "../actions/CreateNew";
+import { REMOVE_CONTACT } from "../actions/CreateNew";
 
 const initialState={
-    contact1:{
-        id:'contact1',
-        name:'Olga',
-        surname:'Kazak',
-        email:'ast@mail.ru',
-        phone:'780256',
-        phone2:'665588',
-        instagram:'Kazak__Olga',
-        fav:false
-            }
+    // contact1:{
+    //     id:'contact1',
+    //     name:'Olga',
+    //     surname:'Kazak',
+    //     email:'ast@mail.ru',
+    //     phone:'780256',
+    //     phone2:'665588',
+    //     instagram:'Kazak__Olga',
+    //     fav:false
+    //         }
 }
 
 export default function contactReducer(state = initialState, action) {
@@ -24,6 +25,14 @@ export default function contactReducer(state = initialState, action) {
               
             }
         } 
+        case REMOVE_CONTACT: {
+            delete state[action.payload.contactId]
+
+            return{
+                ...state 
+            } 
+        }
+    
         default:
         return state
 }

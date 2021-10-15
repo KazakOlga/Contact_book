@@ -1,16 +1,27 @@
 import React from "react";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Button from '@material-ui/core/Button';
 import PhoneIcon from '@material-ui/icons/Phone';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { useSelector } from 'react-redux';
+import DeleteIcon from '@material-ui/icons/Delete';
+import { useDispatch, useSelector } from 'react-redux';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import './Contact.css'
 import { useParams } from "react-router";
+import { useHistory} from 'react-router';
+import { removeContact } from "./State/actions/CreateNew";
 
 function Contact() {
   const { contactId } = useParams()
+  const dispatch = useDispatch()
+  const history=useHistory()
   const contact = useSelector((state) => state.contacts[contactId] || {})
-  console.log(contact)
+
+  const handleRemoveContact=(contactId)=>{
+        dispatch(removeContact(contactId))
+        history.push(`../contacts`)
+
+  }
 
 
     return (
@@ -29,6 +40,16 @@ function Contact() {
            <div className="icon_pos">
            <InstagramIcon/><p>{contact.instagram}</p>
            </div>
+           
+           <Button
+                onClick={()=>handleRemoveContact(contactId)}
+                type="submit"
+                variant="outlined"
+                tabIndex={-1}
+                title="Отправить"
+            ><DeleteIcon/> Delete contact
+            </Button>
+           
       </div>
     );
   }
